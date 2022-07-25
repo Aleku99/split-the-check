@@ -1,0 +1,9 @@
+.Input {
+  margin: 1rem 3rem;
+}
+.Form {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
