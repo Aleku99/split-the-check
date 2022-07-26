@@ -1,12 +1,15 @@
 import React from "react";
-import usePersons from "../../hooks/usePersons";
 import Person from "../Person/Person";
 import styles from "./AddPersonsTable.module.css";
 import AddPersonForm from "../AddPersonForm/AddPersonForm";
-function AddPersonsTable() {
-  const [persons, total, addPerson, removePerson, addSum, setSplit] =
-    usePersons();
-
+function AddPersonsTable({
+  persons,
+  total,
+  addPerson,
+  removePerson,
+  addSum,
+  setSplit,
+}) {
   return (
     <>
       <div className={styles.PersonsTable}>

@@ -1,7 +1,7 @@
 .PersonsTable {
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-direction: column;
   flex-grow: 1;
 }

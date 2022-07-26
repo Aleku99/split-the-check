@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  color: #143d59;
 }
 .AppTitle {
   font-size: 2rem;
@@ -12,4 +13,9 @@
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+}
+.Image {
+  width: 10rem;
+  margin: 0 auto;
+  padding-top: 2rem;
 }

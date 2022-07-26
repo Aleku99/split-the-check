@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import styles from "./AddPersonForm.module.css";
 const INITIAL_STATE = {
   name: "",
-  sum: 0,
+  sum: "",
   split: 0,
 };
 function AddPersonForm({ addPerson, addSum }) {
   const [person, setPerson] = useState(INITIAL_STATE);
   function handleClick() {
     if (person.name !== "" && person.sum !== 0) {
-      addPerson(person);
       addSum(parseInt(person.sum));
+      addPerson(person);
+      setPerson(INITIAL_STATE);
     }
   }
   function handleChange(event) {
@@ -32,6 +33,7 @@ function AddPersonForm({ addPerson, addSum }) {
           type="text"
           placeholder="Name"
           name="name"
+          value={person.name}
           onChange={handleChange}
         ></input>
         <input
@@ -39,10 +41,13 @@ function AddPersonForm({ addPerson, addSum }) {
           type="number"
           placeholder="Sum"
           name="sum"
+          value={person.sum}
           onChange={handleChange}
         ></input>
       </div>
-      <button onClick={handleClick}>Add person</button>
+      <button className={styles.Button} onClick={handleClick}>
+        Add person
+      </button>
     </>
   );
 }
